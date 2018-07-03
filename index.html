@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="jquery.img-resizer.js"></script>
+</head>
+<body>
+    <img id="show_pic" src=""><button onclick="window.ImaResizer.show();">选择图片</button>
+    <script type="text/javascript">
+
+        $.initImgResizer({
+            imgWidth : 500,
+            imgHeight : 250,
+            onConfirm : function (base64Img) {
+                $("#show_pic").prop("src", base64Img).on("load", function () {
+                    console.log($(this).width(), $(this).height());
+                });
+            }
+        }).show();
+    </script>
+</body>
+</html>
