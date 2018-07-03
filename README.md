@@ -26,3 +26,8 @@
     window.ImaResizer.show();
 </script>
 ```
+# 演示地址
+在线演示：[http://140.143.187.117/ir_demo/index.html](http://140.143.187.117/ir_demo/index.html)
+
+# 其他
+代码没有进行压缩，导入后，请自行用webpack等工具进行压缩。
